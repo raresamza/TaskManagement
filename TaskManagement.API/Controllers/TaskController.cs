@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TaskManagement.Application.DTOs;
@@ -31,6 +32,7 @@ public class TaskController : ControllerBase
         var task = await _taskService.GetTaskByIdAsync(id);
         return task == null ? NotFound() : Ok(task);
     }
+    //[Authorize]
     [HttpPost]
     public async Task<ActionResult> CreateTask(TaskItem task)
     {

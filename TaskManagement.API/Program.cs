@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TaskManagement.Domain.Entities;
+using TaskManagement.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
